@@ -15,4 +15,4 @@ class Articulo(models.Model):
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
     titulo = models.CharField(max_length=100, null=False)
     comentario = models.TextField(max_length=1000)
-    fechaPublicacion = models.DateField(default=datetime.now, blank=True)
+    fechaPublicacion = models.DateField(auto_now_add=True, blank=True)
